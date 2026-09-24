@@ -3,160 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haroldo Jr e Rayane</title>
+  <title>Convite de Casamento</title>
   
-  <!-- Google Fonts -->
+  <!-- Fontes do Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- CSS Local -->
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<div class="card-container">
 
-  <!-- FOTO DO TOPO -->
-  <div class="top-photo-wrapper">
-    <img src="imagens/foto-casal1.png" alt="Foto Casal Topo">
-  </div>
-  <!-- CONTEÚDO PRINCIPAL (Tudo fica aqui dentro) -->
-  <div class="main-content">
+  <div class="card-container">
     
-    <!-- CONTAINER DOS NOMES COM A DECORAÇÃO -->
-    <div class="names-container">
-      <img src="imagens/arabesco-esquerda.png" alt="Detalhe" class="left-decoration">
-      <h1 class="couple-names">
-        Haroldo Jr
-        <span>&</span>
-        Rayane
-      </h1>
-    </div> 
+    <!-- Foto do Topo -->
+    <div class="top-photo-wrapper">
+      <img src="foto-topo.jpg" alt="Foto do Casal">
+    </div>
+
+    <!-- Conteúdo Central -->
+    <main class="main-content">
       
-      <!-- TEXTO DE CONVITE -->
+      <div class="names-container">
+        <img src="decoracao-esquerda.png" alt="" class="left-decoration">
+        <h1 class="couple-names">
+          Nome <span>&</span> Nome
+        </h1>
+      </div>
+
       <p class="invitation-text">
-        "Se o Senhor não edificar a casa, em vão trabalham os que a edificam" Salmos 127:1 <br>
-        Chegou o momento de consagrarmos nosso amor diante de Deus e seria muito especial ter você conosco neste momento.
+        Convidam para a celebração do seu casamento
       </p>
 
-      <!-- LOCAL E HORA -->
       <div class="location-info">
         <div class="divider-line"></div>
-        <p class="location-text">Capela Nossa Senhora das Graças <br> Barreiro</p>
+        <p class="location-text">Local do Evento</p>
         <div class="divider-line"></div>
       </div>
 
-      <div class="time-text">
-        <i class="far fa-clock"></i>
-        <span>11H PONTUALMENTE</span>
+      <div class="date-wrapper">
+        <img src="data-topo.png" alt="" class="date-deco date-deco-top">
+        <div class="date-badge">15.11.2026</div>
+        <img src="data-rodape.png" alt="" class="date-deco date-deco-bottom">
       </div>
-    <!-- SEÇÃO DA DATA COM DECORAÇÕES -->
-<div class="date-wrapper">
-  
-  <!-- Imagem acima da data -->
-  <img src="imagens/arabesco-coracao-cima.png" alt="Decoração Topo" class="date-deco date-deco-top">
 
-      <!-- DATA EM DESTAQUE -->
-      <div class="date-badge">
-        31.10.2026
+      <p class="touch-instruction">Toque nas opções abaixo</p>
+
+      <div class="interactive-buttons">
+        <!-- Botão RSVP para abrir o modal -->
+        <div class="btn-row" id="openRsvpBtn">
+          <div class="icon-square">✉</div>
+          <span class="btn-label">Confirmar Presença</span>
+        </div>
       </div>
-<!-- Imagem embaixo da data -->
-  <img src="imagens/arabesco-coracao-baixo.png" alt="Decoração Base" class="date-deco date-deco-bottom">
-</div>
-  
 
-      <!-- INSTRUÇÃO -->
-      <p class="touch-instruction">Toque para interagir</p>
-<!-- BOTÕES INTERATIVOS -->
-<div class="interactive-buttons">
+    </main>
 
-  <!-- Botão 1: Local da Cerimônia (Igreja) -->
-  <a href="https://maps.app.goo.gl/H4rfusK3CGYiWQwQ7" target="_blank" rel="noopener noreferrer" class="btn-row">
-    <div class="icon-square">
-      <i class="fas fa-church"></i>
-    </div>
-    <span class="btn-label">Local da Cerimônia</span>
-  </a>
-
-   <!-- Botão 2: Local da recepção -->
-  <a href="https://maps.app.goo.gl/dDo1UK5PP3X9465D6" target="_blank" rel="noopener noreferrer" class="btn-row reverse">
-    <div class="icon-square">
-      <i class="fas fa-church"></i>
-    </div>
-    <span class="btn-label">Local da recepção</span>
-  </a>
-
-  <!-- Botão 3: Confirmar Presença -->
-  <div class="btn-row" id="rsvpBtn">
-    <div class="icon-square">
-      <i class="fas fa-user-check"></i>
-    </div>
-    <span class="btn-label">Confirmar Presença</span>
-  </div>
-
-  <!-- Botão 3: Lista de presentes -->
-  <a href="https://lojabomdesconto.github.io/haroldo-rayane-dourado/lista-de-presentes.html" target="_blank" rel="noopener noreferrer" class="btn-row reverse">
-    <div class="icon-square">
-      <i class="fas fa-heart"></i>
-    </div>
-    <span class="btn-label">Lista de presentes</span>
-  </a>
-
-</div>
-    <!-- FOTO DA PARTE INFERIOR -->
+    <!-- Foto Rodapé -->
     <div class="bottom-section">
-      <div class="waiting-text">
-        Esperamos<br>por você!
-      </div>
       <div class="bottom-photo-wrapper">
-        <img src="imagens/imagem-final.png" alt="flores douradas">
+        <img src="foto-rodape.jpg" alt="Casal">
+        <div class="waiting-text">Esperamos você!</div>
       </div>
     </div>
 
   </div>
 
- <!-- MODAL RSVP -->
-<div id="rsvpModal" class="modal">
-  <div class="modal-content">
-    <h3>Confirmação de Presença</h3>
-    <form id="rsvpForm">
-      
-      <div class="form-group">
-        <label for="nome">Seu Nome Completo:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome completo" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="presencaCelebracao">Celebração:</label>
-        <select id="presencaCelebracao" required>
-          <option value="Sim, estarei presente na Celebração">Sim, estarei presente na Celebração</option>
-          <option value="Não poderei ir à Celebração">Não poderei ir à Celebração</option>
-        </select>
-      </div>
+  <!-- MODAL RSVP -->
+  <div id="rsvpModal" class="modal">
+    <div class="modal-content">
+      <h3>Confirmação de Presença</h3>
+      <form id="rsvpForm">
+        
+        <div class="form-group">
+          <label for="nome">Seu Nome Completo:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="presencaCelebracao">Celebração:</label>
+          <select id="presencaCelebracao" required>
+            <option value="Sim, estarei presente na Celebração">Sim, estarei presente na Celebração</option>
+            <option value="Não poderei ir à Celebração">Não poderei ir à Celebração</option>
+          </select>
+        </div>
 
-      <div class="form-group">
-        <label for="presencaRecepcao">Recepção / Festa:</label>
-        <select id="presencaRecepcao" required>
-          <option value="Sim, estarei presente na Recepção">Sim, estarei presente na Recepção</option>
-          <option value="Não poderei ir à Recepção">Não poderei ir à Recepção</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label for="presencaRecepcao">Recepção / Festa:</label>
+          <select id="presencaRecepcao" required>
+            <option value="Sim, estarei presente na Recepção">Sim, estarei presente na Recepção</option>
+            <option value="Não poderei ir à Recepção">Não poderei ir à Recepção</option>
+          </select>
+        </div>
 
-      <div class="form-group">
-        <label for="acompanhantes">Quantidade de Acompanhantes:</label>
-        <input type="number" id="acompanhantes" placeholder="0" min="0" value="0">
-      </div>
+        <div class="form-group">
+          <label for="acompanhantes">Quantidade de Acompanhantes:</label>
+          <input type="number" id="acompanhantes" placeholder="0" min="0" value="0">
+        </div>
 
-      <button type="submit" class="modal-btn">Enviar via WhatsApp</button>
-      <button type="button" class="modal-btn btn-cancel" id="closeRsvpBtn">Cancelar</button>
-    </form>
+        <button type="submit" class="modal-btn">Enviar via WhatsApp</button>
+        <button type="button" class="modal-btn btn-cancel" id="closeRsvpBtn">Cancelar</button>
+      </form>
+    </div>
   </div>
-</div>
 
-<!-- JavaScript Local -->
-<script src="./script.js"></script>
+  <!-- JavaScript Local -->
+  <script src="./script.js"></script>
 </body>
 </html>
