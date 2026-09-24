@@ -1,24 +1,19 @@
-document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+const modal = document.getElementById('rsvpModal');
+const closeBtn = document.getElementById('closeRsvpBtn');
 
-    // Substitua pelo número do WhatsApp que receberá as confirmações (com DDD)
-    const numeroWhatsapp = "553492995097"; 
+// Função para abrir o modal
+function openModal() {
+  modal.style.display = 'flex';
+}
 
-    const nome = document.getElementById('nome').value;
-    const celebracao = document.getElementById('presencaCelebracao').value;
-    const recepcao = document.getElementById('presencaRecepcao').value;
-    const acompanhantes = document.getElementById('acompanhantes').value;
+// Fechar modal ao clicar no botão Cancelar
+closeBtn.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
 
-    // Montagem da mensagem formatada para o WhatsApp
-    let mensagem = `*Confirmação de Presença - Casamento*\n\n`;
-    mensagem += `👤 *Nome:* ${nome}\n`;
-    mensagem += `⛪ *Celebração:* ${celebracao}\n`;
-    mensagem += `🥂 *Recepção:* ${recepcao}\n`;
-    mensagem += `👥 *Acompanhantes:* ${acompanhantes}`;
-
-    // Codifica o texto para ser enviado na URL
-    const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
-
-    // Abre o WhatsApp em uma nova aba
-    window.open(urlWhatsapp, '_blank');
+// Fechar modal ao clicar fora do conteúdo
+window.addEventListener('click', function(e) {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
 });
