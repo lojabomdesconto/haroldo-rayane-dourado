@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haroldo Jr e Rayane</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Local -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="card-container">
+
+  <!-- FOTO DO TOPO -->
+  <div class="top-photo-wrapper">
+    <img src="imagens/foto-casal1.png" alt="Foto Casal Topo">
+  </div>
+  <!-- CONTEÚDO PRINCIPAL (Tudo fica aqui dentro) -->
+  <div class="main-content">
+    
+    <!-- CONTAINER DOS NOMES COM A DECORAÇÃO -->
+    <div class="names-container">
+      <img src="imagens/arabesco-esquerda.png" alt="Detalhe" class="left-decoration">
+      <h1 class="couple-names">
+        Haroldo Jr
+        <span>&</span>
+        Rayane
+      </h1>
+    </div> 
+      
+      <!-- TEXTO DE CONVITE -->
+      <p class="invitation-text">
+        "Se o Senhor não edificar a casa, em vão trabalham os que a edificam" Salmos 127:1 <br>
+        Chegou o momento de consagrarmos nosso amor diante de Deus e seria muito especial ter você conosco neste momento.
+      </p>
+
+      <!-- LOCAL E HORA -->
+      <div class="location-info">
+        <div class="divider-line"></div>
+        <p class="location-text">Capela Nossa Senhora das Graças <br> Barreiro</p>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="time-text">
+        <i class="far fa-clock"></i>
+        <span>11H PONTUALMENTE</span>
+      </div>
+    <!-- SEÇÃO DA DATA COM DECORAÇÕES -->
+<div class="date-wrapper">
+  
+  <!-- Imagem acima da data -->
+  <img src="imagens/arabesco-coracao-cima.png" alt="Decoração Topo" class="date-deco date-deco-top">
+
+      <!-- DATA EM DESTAQUE -->
+      <div class="date-badge">
+        31.10.2026
+      </div>
+<!-- Imagem embaixo da data -->
+  <img src="imagens/arabesco-coracao-baixo.png" alt="Decoração Base" class="date-deco date-deco-bottom">
+</div>
+  
+
+      <!-- INSTRUÇÃO -->
+      <p class="touch-instruction">Toque para interagir</p>
+<!-- BOTÕES INTERATIVOS -->
+<div class="interactive-buttons">
+
+  <!-- Botão 1: Local da Cerimônia (Igreja) -->
+  <a href="https://maps.app.goo.gl/H4rfusK3CGYiWQwQ7" target="_blank" rel="noopener noreferrer" class="btn-row">
+    <div class="icon-square">
+      <i class="fas fa-church"></i>
+    </div>
+    <span class="btn-label">Local da Cerimônia</span>
+  </a>
+
+   <!-- Botão 2: Local da recepção -->
+  <a href="https://maps.app.goo.gl/dDo1UK5PP3X9465D6" target="_blank" rel="noopener noreferrer" class="btn-row reverse">
+    <div class="icon-square">
+      <i class="fas fa-church"></i>
+    </div>
+    <span class="btn-label">Local da recepção</span>
+  </a>
+
+  <!-- Botão 2: Confirmar Presença -->
+  <div class="btn-row" id="rsvpBtn">
+    <div class="icon-square">
+      <i class="fas fa-user-check"></i>
+    </div>
+    <span class="btn-label">Confirmar Presença</span>
+  </div>
+
+  <!-- Botão 3: Lista de presentes -->
+  <a href="https://noivos.casar.com/suellen-e-renato-2026-12-05" target="_blank" rel="noopener noreferrer" class="btn-row reverse">
+    <div class="icon-square">
+      <i class="fas fa-heart"></i>
+    </div>
+    <span class="btn-label">Lista de presentes</span>
+  </a>
+
+</div>
+    <!-- FOTO DA PARTE INFERIOR -->
+    <div class="bottom-section">
+      <div class="waiting-text">
+        Esperamos<br>por você!
+      </div>
+      <div class="bottom-photo-wrapper">
+        <img src="imagens/imagem-final.png" alt="flores douradas">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL RSVP -->
+  <div id="rsvpModal" class="modal">
+    <div class="modal-content">
+      <h3>Confirmação de Presença</h3>
+      <form id="rsvpForm">
+        <input type="text" id="nome" placeholder="Seu Nome Completo" required>
+        <select id="presenca">
+          <option value="Sim">Sim, estarei presente</option>
+          <option value="Não">Não poderei ir</option>
+        </select>
+        <input type="number" id="acompanhantes" placeholder="Qtde de acompanhantes" min="0" value="0">
+        <button type="submit" class="modal-btn">Enviar via WhatsApp</button>
+        <button type="button" class="modal-btn btn-cancel" id="closeRsvpBtn">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Local -->
+  <script src="./script.js"></script>
+</body>
+</html>
