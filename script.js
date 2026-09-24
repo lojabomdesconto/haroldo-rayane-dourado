@@ -1,36 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const rsvpModal = document.getElementById("rsvpModal");
-  const rsvpBtn = document.getElementById("rsvpBtn");
-  const closeRsvpBtn = document.getElementById("closeRsvpBtn");
-  const rsvpForm = document.getElementById("rsvpForm");
+document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-  if (rsvpBtn && rsvpModal) {
-    rsvpBtn.addEventListener("click", function() {
-      rsvpModal.style.display = "flex";
-    });
-  }
+    // Substitua pelo número do WhatsApp que receberá as confirmações (com DDD)
+    const numeroWhatsapp = "553492995097"; 
 
-  if (closeRsvpBtn && rsvpModal) {
-    closeRsvpBtn.addEventListener("click", function() {
-      rsvpModal.style.display = "none";
-    });
-  }
+    const nome = document.getElementById('nome').value;
+    const celebracao = document.getElementById('presencaCelebracao').value;
+    const recepcao = document.getElementById('presencaRecepcao').value;
+    const acompanhantes = document.getElementById('acompanhantes').value;
 
-  if (rsvpForm) {
-    rsvpForm.addEventListener("submit", function(e) {
-      e.preventDefault();
+    // Montagem da mensagem formatada para o WhatsApp
+    let mensagem = `*Confirmação de Presença - Casamento*\n\n`;
+    mensagem += `👤 *Nome:* ${nome}\n`;
+    mensagem += `⛪ *Celebração:* ${celebracao}\n`;
+    mensagem += `🥂 *Recepção:* ${recepcao}\n`;
+    mensagem += `👥 *Acompanhantes:* ${acompanhantes}`;
 
-      const nome = document.getElementById("nome").value;
-      const presenca = document.getElementById("presenca").value;
-      const acompanhantes = document.getElementById("acompanhantes").value;
+    // Codifica o texto para ser enviado na URL
+    const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
 
-      const mensagem = `Olá! Confirmando presença no casamento de Suellen e Renato:%0A*Nome:* ${nome}%0A*Vai comparecer?* ${presenca}%0A*Acompanhantes:* ${acompanhantes}`;
-      const numeroWhats = "554896570197";
-
-      window.open(`https://wa.me/${numeroWhats}?text=${mensagem}`, "_blank");
-      
-      rsvpForm.reset();
-      rsvpModal.style.display = "none";
-    });
-  }
+    // Abre o WhatsApp em uma nova aba
+    window.open(urlWhatsapp, '_blank');
 });
