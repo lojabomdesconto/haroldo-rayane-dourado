@@ -139,6 +139,23 @@ html, body {
   text-transform: uppercase;
 }
 
+/* Horário do Evento - Garante a cor dourada no texto e ícone */
+.time-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-gold);
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.time-text i,
+.time-text span {
+  color: var(--text-gold);
+}
+
 .date-wrapper {
   display: flex;
   flex-direction: column;
