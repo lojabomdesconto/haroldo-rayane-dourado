@@ -117,6 +117,10 @@ html, body {
   text-transform: uppercase;
   margin-bottom: 25px;
 }
+/* Espaço menor entre o versículo e o texto do convite */
+.invitation-text + .invitation-text {
+  margin-top: -10px; /* Reduz o espaço excessivo entre os dois parágrafos */
+}
 
 .location-info {
   width: 100%;
