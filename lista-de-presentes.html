@@ -50,6 +50,38 @@
       font-weight: bold;
       margin-top: 4px;
     }
+
+    /* Estilo do Botão Voltar */
+    .btn-voltar-container {
+      text-align: center;
+      margin: 20px 0 10px 0;
+    }
+
+    .btn-voltar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: #d1b280;
+      border: 1px solid #d1b280;
+      padding: 10px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9em;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-voltar:hover {
+      background-color: #d1b280;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(209, 178, 128, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -97,6 +129,13 @@
           Rayane
         </h1>
       </div> 
+
+      <!-- BOTÃO VOLTAR -->
+      <div class="btn-voltar-container">
+        <a href="javascript:history.back()" class="btn-voltar">
+          <i class="fa-solid fa-arrow-left"></i> Voltar
+        </a>
+      </div>
 
       <!-- FOTO DA PARTE INFERIOR -->
       <div class="bottom-section">
