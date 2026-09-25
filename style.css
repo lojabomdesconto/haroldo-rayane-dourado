@@ -122,6 +122,16 @@ html, body {
   margin-top: -10px; /* Reduz o espaço excessivo entre os dois parágrafos */
 }
 
+.information-extra {
+  font-size: 0.8rem;
+  color: var(--text-gold);
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  max-width: 320px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
 .location-info {
   width: 100%;
   margin-bottom: 15px;
